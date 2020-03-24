@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				border-top: 20px solid black;
+				padding-top: 20px;
+				padding-left: 10px;
+				margin: 0;
+			}
+			table {
+				border: 3px solid #a1a1a1;
+				width:100%;
+			}
+			th, td {
+				border-radius: 10px 0px 20px 0px;
+				border: 2px solid blue;
+				font-family: ;
+				font-weight: bold;
+				font-size: 20px;
+				padding: 10px;
+			}
+			a {
+				text-decoration: none;
+			}
+			input {
+				margin-left:20px;
+				margin-bottom:10px;
+				margin-top:20px;
+				font-size: 20px;
+				width:40%;
+			}
+			
+		</style>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="myscript.js"></script>
+	</head>
+	<body onload="addInfo('tab', data)">
+		<div style="margin-left:20px">
+			Type Something to Search. <br/>
+			<input type="text" id="search" placeholder="Search..." onkeyup="hamidSearch('search', data, 'tab')" autofocus>
+		</div>
+		<div style="margin:20px;">
+		<table id="tab">
+			<tr>
+				<th style="font-size: 30px;background-color:#0af;">Branch</th>
+				<th style="font-size: 30px;background-color:#0af;">Section Name</th>
+				<th style="font-size: 30px;background-color:#0af;">Session</th>
+			</tr>
+		</table>
+		</div>
+	</body>
+</html>
