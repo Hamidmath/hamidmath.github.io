@@ -10,6 +10,8 @@ function addInfo(id, myinfo)
 		td2 = document.createElement("td");
 		td3 = document.createElement("td");
 		
+		td3.style.textAlign = "center";
+		
 		
 		branch = document.createTextNode(myinfo[i].branch);
 		sectionName = document.createTextNode(myinfo[i].sectionName);
