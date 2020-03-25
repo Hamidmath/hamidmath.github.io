@@ -178,5 +178,161 @@ session: "2"
 branch: "Matematik",
 sectionName: "Permütasyon-Kombinasyon Binom-Olasılık",
 session: "2"
+},
+//--------------------1 
+{
+branch: "Geometri",
+sectionName: "Açılar",
+session: "1"
+},
+//--------------------2 
+{
+branch: "Geometri",
+sectionName: "Üçgende Açılar",
+session: "2"
+},
+//--------------------3 
+{
+branch: "Geometri",
+sectionName: "Açı-Kenar Bağıntıları",
+session: "2"
+},
+//--------------------4
+{
+branch: "Geometri",
+sectionName: "Dik Üçgen",
+session: "2"
+},
+//--------------------5 
+{
+branch: "Geometri",
+sectionName: "İkizkenar-Eşkenar Üçgen",
+session: "2"
+},
+//--------------------6 
+{
+branch: "Geometri",
+sectionName: "Açıortay",
+session: "2"
+},
+//--------------------7 
+{
+branch: "Geometri",
+sectionName: "Kenarortay",
+session: "2"
+},
+//--------------------8 
+{
+branch: "Geometri",
+sectionName: "Menelaus-Carnot-Seva-Stewart",
+session: "2"
+},
+//--------------------9
+{
+branch: "Geometri",
+sectionName: "Üçgende Benzerlik",
+session: "2"
+},
+//--------------------10 
+{
+branch: "Geometri",
+sectionName: "Üçgende Alan",
+session: "2"
+},
+//--------------------11 
+{
+branch: "Geometri",
+sectionName: "Çokgenler",
+session: "2"
+},
+//--------------------12
+{
+branch: "Geometri",
+sectionName: "Dörtgenler",
+session: "2"
+},
+//--------------------13 
+{
+branch: "Geometri",
+sectionName: "Paralelkenar",
+session: "2"
+},
+//--------------------14 
+{
+branch: "Geometri",
+sectionName: "Eşkenar Dörtgen",
+session: "2"
+},
+//--------------------15 
+{
+branch: "Geometri",
+sectionName: "Yamuk",
+session: "2"
+},
+//--------------------16 
+{
+branch: "Geometri",
+sectionName: "Deltoid",
+session: "1"
+},
+//--------------------17 
+{
+branch: "Geometri",
+sectionName: "Dikdörtgen",
+session: "2"
+},
+//--------------------18 
+{
+branch: "Geometri",
+sectionName: "Kare",
+session: "2"
+},
+//--------------------19
+{
+branch: "Geometri",
+sectionName: "Çemberde Açı",
+session: "2"
+},
+//--------------------20
+{
+branch: "Geometri",
+sectionName: "Çemberde Uzunluk",
+session: "2"
+},
+//--------------------21 
+{
+branch: "Geometri",
+sectionName: "Dairede Alan ve Kay Uzunluğu",
+session: "2"
+},
+//--------------------22 
+{
+branch: "Geometri",
+sectionName: "Analitik Geometri",
+session: "2"
+},
+//--------------------23 
+{
+branch: "Geometri",
+sectionName: "Simetri",
+session: "2"
+},
+//--------------------24 
+{
+branch: "Geometri",
+sectionName: "Çember Analitiği",
+session: "2"
+},
+//--------------------25 
+{
+branch: "Geometri",
+sectionName: "Katı Cisim",
+session: "2"
+},
+//--------------------26
+{
+branch: "Geometri",
+sectionName: "Vektörler",
+session: "2"
 }
 ];
