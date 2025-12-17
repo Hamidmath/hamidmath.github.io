@@ -4,213 +4,275 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hamid Shafieasl - Homepage</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* Basic Styling */
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f8fc;
-  color: #333;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #eef2f7;
+    color: #2d2d2d;
 }
 
 .container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
-/* Header Section */
+/* Header */
 .header {
-  text-align: center;
-  border-bottom: 2px solid #0078d4;
-  padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #005a9e;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
 }
 
-.header h1 {
-  font-size: 32px;
-  color: #0078d4;
-  margin-bottom: 8px;
+.header-text h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #005a9e;
+    font-weight: 700;
 }
 
-.header p {
-  font-size: 16px;
-  color: #555;
+.header-text p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #444;
 }
 
-/* Section Titles */
-.about h2, .skills h2 {
-  font-size: 24px;
-  color: #0078d4;
-  border-left: 4px solid #0078d4;
-  padding-left: 10px;
-  margin-bottom: 20px;
+.header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.about {
-  margin-bottom: 40px;
+/* Section titles */
+.section-title {
+    font-size: 26px;
+    color: #005a9e;
+    border-left: 6px solid #005a9e;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
-.about p, .about ul li {
-  line-height: 1.6;
-}
-
-h4 {
-  color: #333;
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-/* List Styling */
+/* Lists */
 ul {
-  list-style: none;
-  padding-left: 20px;
+    padding-left: 20px;
+    list-style: none;
 }
 
 ul li {
-  margin-bottom: 8px;
-  position: relative;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 ul li::before {
-  content: "•";
-  color: #0078d4;
-  font-weight: bold;
-  margin-right: 8px;
+    content: "▸";
+    color: #005a9e;
+    position: absolute;
+    left: -18px;
 }
 
 /* Links */
 a {
-  color: #0078d4;
-  text-decoration: none;
+    color: #005a9e;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* Publications Styling */
-.publications {
-  margin-top: 20px;
+/* Publications */
+.publication {
+    background: #f7f9fb;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    border-left: 4px solid #0076c2;
 }
 
-.publications div {
-  margin-bottom: 20px;
+.publication h4 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.publications h4 {
-  font-size: 18px;
-  margin: 8px 0;
-}
-
-.publications p {
-  margin: 4px 0;
-  color: #555;
-}
-
-/* Footer Links */
-.footer-links {
-  margin-top: 20px;
-  line-height: 1.8;
-  font-size: 16px;
+.publication p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 15px;
 }
 </style>
+
 </head>
 <body>
+
 <div class="container">
-  <div class="header">
-    <h1>Hamid Shafieasl</h1>
-    <p>Email: Hamidmath2013@outlook.com</p>
-	  <img src="pic.jpg" alt="Hamid's Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-top: 20px;">
-  </div>
 
-  <div class="about">
-    <h2>About Me</h2>
-    <p>I am Hamid Shafieasl, a Ph.D. student in Computer Science with a focus on Artificial Intelligence at the University of Utah, USA. I began my journey as a Research Assistant in Fall 2024. Prior to this, I earned a Ph.D. in Harmonic Analysis from Azerbaijan Shahid Madani University, Tabriz, Iran, in 2018.</p>
-  </div>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-text">
+            <h1>Hamid Shafieasl</h1>
+            <p>PhD Student in Computer Science (Artificial Intelligence), University of Utah</p>
+            <p>Email: <a href="mailto:hamidmath2013@outlook.com">hamidmath2013@outlook.com</a></p>
+            <p>
+                <a href="https://hamidmath.github.io">Website</a> |
+                <a href="https://www.linkedin.com/in/hamid-shafieasl-72b9ba224">LinkedIn</a> |
+                <a href="https://scholar.google.com/citations?user=fiP4N3oAAAAJ">Google Scholar</a> |
+                <a href="https://math.stackexchange.com/users/104368/hamid-shafieasl">Math.SE (3,025 rep)</a>
+            </p>
+        </div>
 
-  <div class="about">
-    <h2>Education</h2>
-    <div>
-      <h4>Doctor of Philosophy in Mathematics (Harmonic Analysis), 2012 ~ 2018</h4>
-      <ul>
-        <li><a href="https://en.azaruniv.ac.it">Azerbaijan Shahid Madani University</a></li>
-        <li>Cohomological Properties of Banach Algebras</li>
-      </ul>
+        <img src="pic.jpg" alt="Hamid's photo">
     </div>
-    <div>
-      <h4>Master of Science in Mathematics (Harmonic Analysis), 2009 ~ 2011</h4>
-      <ul>
-        <li><a href="https://en.azaruniv.ac.it">Azerbaijan Shahid Madani University</a></li>
-        <li>Amenability, Projectivity, Biflatness of Inverse Semigroup Algebras</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Bachelor of Science in Mathematics (Pure Mathematics), 2005 ~ 2009</h4>
-      <ul>
-        <li><a href="https://iaut.education">Azad University of Tabriz</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="about">
-    <h2>Work Experience</h2>
-    <div>
-      <h4>Math Lecturer, Azerbaijan Shahid Madani University (2010 ~ 2018)</h4>
-      <ul>
-        <li>Courses Taught: Calculus I-III, Differential Equations, Complex Functions, Discrete Mathematics, Set Theory, and Analysis</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Freelancer (2009 ~ 2023)</h4>
-      <ul>
-        <li>Private tutoring in mathematics and programming (Python)</li>
-        <li>Training students for the <a href="https://yos.istanbul.edu.tr/en/">YÖS Exam</a></li>
-      </ul>
-    </div>
-  </div>
+    <!-- SUMMARY -->
+    <h2 class="section-title">Professional Summary</h2>
+    <p>
+        PhD student in Artificial Intelligence with a prior PhD in Mathematics (Harmonic Analysis). Skilled in Python programming,
+        algorithmic reasoning, and mathematical modeling. Experienced in geometric computation and interdisciplinary research.
+        Strong analytical background with proven problem-solving ability demonstrated by contributions to Mathematics Stack Exchange (Reputation: 3,025).
+    </p>
 
-  <div class="publications">
-    <h2>Publications</h2>
-    <div>
-      <h4><a href="https://www.heldermann.de/JGG/JGG28/JGG281/jgg28008.htm">Geometric Design Tool for One-Fold, a Curved Origami with a Single Fold</a></h4>
-      <p><i>Journal for Geometry and Graphics</i>, 28 (2024), No. 1, 089–101</p>
-      <p>Authors: A. Safary, H. Shafieasl, and J. Mitani</p>
-    </div>
-	<div>
-	  <h4><a href="https://www.pmf.ni.ac.rs/filomat-content/2020/34-5/34-5-21-9119.pdf">
-	  Bounded pseudoamenability and contractibility of certain Banach algebras
-	  </a></h4>
-	  <p style="margin:10px"><i>Filomat</i>, University of Nis, Nis, Serbia Vol. 34 No. 5 (2020)</p>
-	  <p style="margin:10px">Authors: H. Pourmahmood-Aghababa, M. H. Sattari and H. Shafieasl</p>
-	
-	</div>
-	
-	<div>
-	  <h4><a href="https://scma.maragheh.ac.ir/article_21382_4d0846371eaab14fedda80b8067ab743.pdf">Symmetric module and connes amenability</a></h4>
-	  <p style="margin:10px"><i>Sahand Communications in Mathematical Analysis (SCMA)</i>, Vol. 5 No. 1 (2017), 49-59</p>
-	  <p style="margin:10px">Authors: M. H. Sattari and H. Shafieasl</p>
-	</div>
-	
-	<div>
-	  <h4><a href="http://jhs-uma.com/index.php/JHSMS/article/viewFile/227/95">
-	  Product of derivations on Triangular Banach algebras</a></h4>
-	  <p style="margin:10px"><i>Journal of Hyperstructures</i>, 6 (1) (2017), 28-39</p>
-	  <p style="margin:10px">Authors: M. H. Sattari and H. Shafieasl</p>
-	</div>	
-    <!-- Add other publications similarly -->
-  </div>
+    <!-- EDUCATION -->
+    <h2 class="section-title">Education</h2>
 
-  <div class="footer-links">
-    <h2>Links & Merits</h2>
-    <p><a href="https://math.stackexchange.com/users/97252/hamid-shafie-asl">Math StackExchange Profile</a></p>
-    <p><a href="https://www.linkedin.com/in/hamid-shafieasl-72b9ba224/">LinkedIn Profile</a></p>
-    <p><a href="https://hamidmath.github.io/CV.pdf">CV</a></p>
-  </div>
+    <ul>
+        <li><strong>Ph.D. in Computer Science (Artificial Intelligence)</strong>, University of Utah — <em>Expected 2029</em></li>
+        <li><strong>Ph.D. in Mathematics</strong>, Azerbaijan Shahid Madani University — 2019</li>
+        <li><strong>M.Sc. in Mathematics</strong>, Azerbaijan Shahid Madani University — 2011</li>
+        <li><strong>B.Sc. in Mathematics</strong>, Azad University of Tabriz — 2009</li>
+    </ul>
+
+    <!-- SKILLS -->
+    <h2 class="section-title">Technical Skills</h2>
+
+    <ul>
+        <li><strong>Programming:</strong> Python, Object-Oriented Programming</li>
+        <li><strong>Machine Learning:</strong> Regression, Supervised & Unsupervised Learning, High-dimensional Methods, Dimensionality Reduction</li>
+        <li><strong>Data Handling:</strong> CSV, JSON, preprocessing, large datasets</li>
+        <li><strong>Tools:</strong> Rhino-Grasshopper (rhinoscriptsyntax), used in geometric modeling research</li>
+        <li><strong>Mathematics:</strong> Harmonic Analysis, Linear Algebra, Calculus, Differential Equations, Complex Analysis, Discrete Mathematics</li>
+    </ul>
+
+    <!-- PROJECTS -->
+    <h2 class="section-title">Selected Projects</h2>
+
+    <ul>
+        <li><strong>Curvature and Torsion of Discretized Curves:</strong> Algorithms for geometric invariants in CAD and computer graphics.</li>
+        <li><strong>Geometric Origami Design:</strong> Python-based modeling of curved origami structures using Rhino-Grasshopper.</li>
+    </ul>
+
+    <!-- EXPERIENCE -->
+    <h2 class="section-title">Professional Experience</h2>
+
+    <h4>Python Instructor, Private Institutes (2020–Present)</h4>
+    <ul>
+        <li>Designed and taught Python courses focused on data science and introductory machine learning.</li>
+    </ul>
+
+    <h4>Mathematics Lecturer, Azerbaijan Shahid Madani University (2011–2018)</h4>
+    <ul>
+        <li>Taught Linear Algebra, Calculus I–III, Mathematical Analysis, Differential Equations, Complex Functions, Discrete Mathematics.</li>
+        <li>Mentored students in mathematical foundations of computational techniques.</li>
+    </ul>
+
+    <h4>Mathematics Teacher, Various Colleges (2009–2024)</h4>
+    <ul>
+        <li>Taught undergraduate and high-school mathematics, emphasizing problem-solving and conceptual rigor.</li>
+    </ul>
+
+    <!-- PUBLICATIONS -->
+    <h2 class="section-title">Publications</h2>
+
+    <div class="publication">
+        <h4><a href="https://www.heldermann.de/JGG/JGG28/JGG282/jgg28013.htm">
+            Parameterized Folded State Shape Modeling of David Huffman’s Ellipse
+        </a></h4>
+        <p><i>Journal for Geometry and Graphics</i>, 28(2):199–212, 2025</p>
+        <p>Authors: A. Safary, H. Shafieasl, J. Mitani</p>
+    </div>
+
+    <div class="publication">
+        <h4><a href="https://www.heldermann.de/JGG/JGG28/JGG281/jgg28006.htm">
+            Geometric Design Tool for One-Fold, a Curved Origami with a Single Fold
+        </a></h4>
+        <p><i>Journal for Geometry and Graphics</i>, 28(1):089–101, 2024</p>
+        <p>Authors: A. Safary, H. Shafieasl, J. Mitani</p>
+    </div>
+
+    <div class="publication">
+        <h4><a href="https://www.pmf.ni.ac.rs/filomat-content/2020/34-5/34-5-30-1459.pdf">
+            Bounded Pseudo-Amenability and Contractibility of Certain Banach Algebras
+        </a></h4>
+        <p><i>Filomat</i>, 34(5):1701–1712, 2020</p>
+        <p>Authors: H. Pourmahmood-Aghababa, M.H. Sattari, H. Shafieasl</p>
+    </div>
+
+    <div class="publication">
+        <h4><a href="https://www.m-hikari.com/imf/imf-2020/5-8-2020/p/shafieaslIMF5-8-2020.pdf">
+            A Note on Ramified Coverings of Riemann Surfaces
+        </a></h4>
+        <p><i>International Mathematical Forum</i>, 15(8):377–381, 2020</p>
+        <p>Author: H. Shafieasl</p>
+    </div>
+
+    <div class="publication">
+        <h4><a href="https://scma.maragheh.ac.ir/article_22501.html">
+            Symmetric Module and Connes Amenability
+        </a></h4>
+        <p><i>Sahand Communications in Mathematical Analysis</i>, 5(1):49–59, 2017</p>
+        <p>Authors: H. Shafieasl, M.H. Sattari</p>
+    </div>
+
+    <div class="publication">
+        <h4><a href="https://www.semnan.ac.ir/files/2/1397/jhs/v6n1_3.pdf">
+            Product of Derivations on Triangular Banach Algebras
+        </a></h4>
+        <p><i>Journal of Hyperstructures</i>, 6(1), 2017</p>
+        <p>Authors: M.H. Sattari, H. Shafieasl</p>
+    </div>
+
+    <!-- AWARDS -->
+    <h2 class="section-title">Awards & Honors</h2>
+
+    <ul>
+        <li>Ranked 1st in Cumulative GPA, B.Sc. in Mathematics, Azad University of Tabriz.</li>
+        <li>Ranked 1st in Cumulative GPA, M.Sc. in Mathematics, Azerbaijan Shahid Madani University.</li>
+        <li>Mathematics Stack Exchange contributor with 3,025 reputation, demonstrating advanced problem-solving skills.</li>
+    </ul>
+
+    <!-- RESEARCH INTERESTS -->
+    <h2 class="section-title">Research Interests</h2>
+
+    <ul>
+        <li>Logic and Simple Operators</li>
+        <li>Mathematics–Machine Learning Intersections</li>
+        <li>High-Dimensional Data and Large-Scale Computation</li>
+        <li>Deep Learning and Neural Networks</li>
+    </ul>
+
+    <!-- CERTIFICATIONS -->
+    <h2 class="section-title">Certifications</h2>
+
+    <ul>
+        <li>Machine Learning, Stanford University (Andrew Ng), Coursera — 2022</li>
+    </ul>
+
 </div>
+
 </body>
 </html>
