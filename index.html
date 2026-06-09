@@ -1,421 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamid Shafieasl - Academic Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamid Shafieasl — Academic Homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --paper:      #faf9f6;
+    --panel:      #ffffff;
+    --ink:        #18181b;
+    --body:       #3d3d42;
+    --muted:      #8a877e;
+    --accent:     #1f6f5c;
+    --accent-ink: #15523f;
+    --accent-soft:#e8f0ec;
+    --line:       #e6e3da;
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    --serif-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --serif-body:    'Newsreader', Georgia, serif;
+    --mono:          'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  }
 
-    <style>
-        :root {
-            --primary-color: #0f172a; /* Deep Navy */
-            --accent-color: #2563eb; /* Bright Blue */
-            --bg-color: #f8fafc; /* Very light slate */
-            --text-main: #334155;
-            --text-light: #64748b;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-        }
+  * { box-sizing: border-box; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  html { scroll-behavior: smooth; }
 
-        .container {
-            max-width: 900px;
-            margin: 60px auto;
-            background: var(--card-bg);
-            padding: 50px 60px;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
-        }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--body);
+    font-family: var(--serif-body);
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
 
-        /* --- Header --- */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 40px;
-            margin-bottom: 40px;
-            gap: 30px;
-        }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 72px 40px 96px;
+  }
 
-        .header-text {
-            flex: 1;
-        }
+  /* ---------- shared eyebrow / mono label ---------- */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
 
-        .header-text h1 {
-            margin: 0 0 5px 0;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
+  /* ---------- header ---------- */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid var(--line);
+  }
+  .masthead-text { flex: 1; min-width: 0; }
 
-        .header-text h2 {
-            margin: 0 0 15px 0;
-            font-size: 1.1rem;
-            color: var(--text-light);
-            font-weight: 400;
-        }
+  .masthead h1 {
+    font-family: var(--serif-display);
+    font-weight: 600;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin: 6px 0 4px;
+  }
+  .role {
+    font-family: var(--serif-body);
+    font-weight: 400;
+    font-size: 1.08rem;
+    color: var(--body);
+    margin: 0 0 4px;
+  }
+  .role .inst { color: var(--muted); }
 
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    margin-top: 20px;
+    font-family: var(--mono);
+  }
+  .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.74rem;
+    letter-spacing: 0.02em;
+    padding: 6px 11px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--panel);
+    transition: color .18s ease, border-color .18s ease, background .18s ease, transform .18s ease;
+  }
+  .links a i { color: var(--accent); font-size: 0.82rem; transition: color .18s ease; }
+  .links a:hover {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .links a:hover i { color: #fff; }
 
-        .contact-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            background: var(--bg-color);
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
+  /* portrait + geometric mark */
+  .portrait-wrap {
+    position: relative;
+    flex: 0 0 auto;
+    width: 138px;
+    height: 138px;
+  }
+  .portrait-wrap img {
+    width: 138px;
+    height: 138px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    display: block;
+  }
+  .glyph {
+    position: absolute;
+    right: -22px;
+    bottom: -20px;
+    width: 64px;
+    height: 64px;
+    opacity: 0.9;
+  }
 
-        .contact-links a:hover {
-            background: var(--accent-color);
-            color: white;
-            transform: translateY(-2px);
-        }
+  /* ---------- sections ---------- */
+  section { margin-top: 56px; }
 
-        .header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 12px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-head .mark {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .section-head h2 {
+    font-family: var(--serif-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0;
+  }
 
-        /* --- Sections --- */
-        .section-title {
-            font-size: 1.4rem;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            margin-top: 50px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+  .lede { font-size: 1.06rem; color: var(--body); margin: 0; }
+  .lede + .lede { margin-top: 14px; }
 
-        .section-title i {
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
+  /* ---------- timeline (education / experience) ---------- */
+  .entry { margin-bottom: 22px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry h3 {
+    font-family: var(--serif-body);
+    font-weight: 600;
+    font-size: 1.12rem;
+    color: var(--ink);
+    margin: 0 0 3px;
+  }
+  .entry .meta {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .entry ul {
+    margin: 9px 0 0;
+    padding-left: 1.15em;
+  }
+  .entry ul li { margin-bottom: 6px; }
+  .entry ul li::marker { color: var(--accent); }
 
-        p {
-            margin-bottom: 15px;
-        }
+  /* ---------- subgroups (skills) ---------- */
+  .subgroup { margin-bottom: 24px; }
+  .subgroup:last-child { margin-bottom: 0; }
+  .subgroup h3 {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .subgroup p { margin: 0; }
 
-        /* --- Lists & Entries --- */
-        .timeline-item {
-            margin-bottom: 20px;
-        }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.01em;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    border: 1px solid #cfe2da;
+    padding: 5px 12px;
+    border-radius: 4px;
+  }
 
-        .timeline-item h4 {
-            margin: 0 0 5px 0;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-        }
+  /* ---------- generic prose list ---------- */
+  .prose-list { margin: 0; padding-left: 1.15em; }
+  .prose-list li { margin-bottom: 12px; }
+  .prose-list li::marker { color: var(--accent); }
+  .prose-list strong { color: var(--ink); font-weight: 600; }
 
-        .timeline-meta {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 8px;
-            font-style: italic;
-        }
+  /* ---------- publications ---------- */
+  .pub {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 0 22px;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .pub:last-child { border-bottom: 1px solid var(--line); }
+  .pub .year {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    padding-top: 2px;
+  }
+  .pub.featured .year { color: var(--accent); }
+  .pub .body { min-width: 0; }
+  .pub h3 {
+    font-family: var(--serif-body);
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin: 0 0 5px;
+  }
+  .pub h3 a {
+    color: var(--ink);
+    text-decoration: none;
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .25s ease, color .2s ease;
+    padding-bottom: 1px;
+  }
+  .pub h3 a:hover { color: var(--accent-ink); background-size: 100% 1px; }
+  .pub .authors { font-size: 0.98rem; color: var(--body); margin: 0 0 2px; }
+  .pub .authors .me { color: var(--ink); font-weight: 600; }
+  .pub .venue {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    margin: 0;
+  }
+  .pub .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    border: 1px solid #cfe2da;
+    border-radius: 3px;
+    padding: 2px 7px;
+    margin-left: 8px;
+    vertical-align: 1px;
+  }
 
-        ul {
-            padding-left: 20px;
-            margin-top: 5px;
-        }
+  /* ---------- two-column footer blocks ---------- */
+  .duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 56px;
+  }
+  .duo .section-head { margin-bottom: 18px; }
 
-        ul li {
-            margin-bottom: 8px;
-            position: relative;
-        }
+  /* ---------- footer ---------- */
+  .colophon {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    text-align: center;
+  }
 
-        ul li::marker {
-            color: var(--accent-color);
-        }
+  /* ---------- entrance motion ---------- */
+  .reveal { opacity: 0; transform: translateY(10px); animation: rise .7s ease forwards; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
 
-        /* --- Badges (Skills & Coursework) --- */
-        .badge-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
+  /* ---------- responsive ---------- */
+  @media (max-width: 720px) {
+    .page { padding: 44px 22px 72px; }
+    .masthead { flex-direction: column-reverse; align-items: flex-start; gap: 26px; }
+    .duo { grid-template-columns: 1fr; gap: 8px; }
+    .pub { grid-template-columns: 1fr; gap: 6px; }
+    .pub .year { padding-top: 0; }
+  }
 
-        .badge {
-            background: #eff6ff;
-            color: #1d4ed8;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid #bfdbfe;
-        }
-
-        /* --- Publications --- */
-        .publication {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--accent-color);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .publication:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .publication h4 {
-            margin: 0 0 8px 0;
-            font-size: 1.1rem;
-            line-height: 1.4;
-        }
-
-        .publication h4 a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .publication h4 a:hover {
-            color: var(--accent-color);
-        }
-
-        .publication p {
-            margin: 4px 0;
-            font-size: 0.95rem;
-        }
-
-        .pub-journal {
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .container {
-                margin: 20px;
-                padding: 30px 20px;
-            }
-            .header {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            .contact-links {
-                justify-content: center;
-            }
-        }
-    </style>
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { animation: none; opacity: 1; transform: none; }
+    .links a:hover { transform: none; }
+  }
+</style>
 </head>
 <body>
+<div class="page">
 
-<div class="container">
+  <!-- ================= HEADER ================= -->
+  <header class="masthead reveal">
+    <div class="masthead-text">
+      <span class="eyebrow">Computational Geometry &middot; Shape Analysis</span>
+      <h1>Hamid Shafieasl</h1>
+      <p class="role">PhD Researcher, Computer Science <span class="inst">— University of Utah</span></p>
+      <p class="role inst" style="font-size:0.98rem;">Previously PhD in Mathematics (Harmonic Analysis)</p>
 
-    <div class="header">
-        <div class="header-text">
-            <h1>Hamid Shafieasl</h1>
-            <h2>PhD Student in Computer Science (AI/Data Science) <br> University of Utah</h2>
-            
-            <div class="contact-links">
-                <a href="mailto:hamidmath2013@outlook.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://hamidmath.github.io" title="Website"><i class="fas fa-globe"></i> Website</a>
-                <a href="https://www.linkedin.com/in/hamidshafieasl/" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=fiP4N3oAAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
-                <a href="https://math.stackexchange.com/users/97252/hamid-shafie-asl" title="Math StackExchange"><i class="fab fa-stack-exchange"></i> Math.SE</a>
-                <a href="https://hamidmath.github.io/CV.pdf" title="Curriculum Vitae"><i class="fas fa-file-pdf"></i> CV</a>
-            </div>
-        </div>
-        <img src="pic.jpg" alt="Hamid Shafieasl">
+      <nav class="links">
+        <a href="mailto:hamidmath2013@outlook.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://hamidmath.github.io" title="Website"><i class="fas fa-globe"></i> Website</a>
+        <a href="https://www.linkedin.com/in/hamidshafieasl/" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=fiP4N3oAAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
+        <a href="https://math.stackexchange.com/users/97252/hamid-shafie-asl" title="Math StackExchange"><i class="fab fa-stack-exchange"></i> Math.SE</a>
+        <a href="https://hamidmath.github.io/CV.pdf" title="Curriculum Vitae"><i class="fas fa-file-pdf"></i> CV</a>
+      </nav>
     </div>
 
-    <h2 class="section-title"><i class="fas fa-user-circle"></i> Professional Summary</h2>
-    <p>
-        PhD student in Artificial Intelligence with a previous PhD in Mathematics (Harmonic Analysis).
-        My research and coursework focus on large-scale data analysis, machine learning, algorithmic reasoning,
-        geometric computation, and intersections between mathematics and computer science.
-        I work with graph algorithms, signal sampling approaches, shape analysis methods, reinforcement learning
-        techniques, and computational geometry.  
+    <div class="portrait-wrap">
+      <img src="pic.jpg" alt="Portrait of Hamid Shafieasl">
+      <!-- geometric mark: a closed boundary curve under a rotation arc — a nod to rotation-invariant shape representation -->
+      <svg class="glyph" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="29" stroke="#cfe2da" stroke-width="1" stroke-dasharray="3 4"/>
+        <path d="M32 9 L41 23 L57 26 L45 38 L48 54 L32 46 L16 54 L19 38 L7 26 L23 23 Z"
+              stroke="#1f6f5c" stroke-width="1.4" stroke-linejoin="round" fill="#e8f0ec"/>
+        <path d="M48 12 A28 28 0 0 1 54 20" stroke="#1f6f5c" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M54 20 l-3.6 -1 l2.4 -2.8 z" fill="#1f6f5c"/>
+        <circle cx="32" cy="32" r="2.1" fill="#15523f"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ================= SUMMARY ================= -->
+  <section>
+    <div class="section-head"><span class="mark">§</span><h2>Profile</h2></div>
+    <p class="lede">
+      I am a PhD researcher in Computer Science whose work sits at the interface of theoretical
+      computer science and applied data problems, building on an earlier PhD in Mathematics
+      (Harmonic Analysis). My current focus is computational geometry and shape analysis —
+      rotation- and reparameterization-invariant representations of curves and 2D objects,
+      together with the algorithmic machinery for shape recognition, retrieval, and large-scale
+      comparison. Adjacent interests run through machine learning, graph algorithms, spectral
+      methods, and the mathematics that underpins them.
     </p>
+  </section>
 
-    <h2 class="section-title"><i class="fas fa-university"></i> Education</h2>
-    
-    <div class="timeline-item">
-        <h4>Ph.D. in Computer Science (Artificial Intelligence)</h4>
-        <div class="timeline-meta">University of Utah — Expected 2029</div>
-    </div>
-    <div class="timeline-item">
-        <h4>Ph.D. in Mathematics</h4>
-        <div class="timeline-meta">Azerbaijan Shahid Madani University — 2019</div>
-    </div>
-    <div class="timeline-item">
-        <h4>M.Sc. in Mathematics</h4>
-        <div class="timeline-meta">Azerbaijan Shahid Madani University — 2011</div>
-    </div>
-    <div class="timeline-item">
-        <h4>B.Sc. in Mathematics</h4>
-        <div class="timeline-meta">Azad University of Tabriz — 2009</div>
-    </div>
+  <!-- ================= EDUCATION ================= -->
+  <section>
+    <div class="section-head"><span class="mark">§</span><h2>Education</h2></div>
 
-    <h2 class="section-title"><i class="fas fa-laptop-code"></i> Technical Skills & Coursework</h2>
-    
-    <div class="timeline-item">
-        <h4>Programming & Tools</h4>
-        <div class="badge-container">
-            <span class="badge">Python</span>
-            <span class="badge">OOP</span>
-            <span class="badge">NumPy</span>
-            <span class="badge">SciPy</span>
-            <span class="badge">Matplotlib</span>
-            <span class="badge">Rhino-Grasshopper</span>
-        </div>
+    <div class="entry">
+      <h3>Ph.D. in Computer Science</h3>
+      <div class="meta">University of Utah · Expected 2029</div>
     </div>
+    <div class="entry">
+      <h3>Ph.D. in Mathematics</h3>
+      <div class="meta">Azarbaijan Shahid Madani University · 2019</div>
+    </div>
+    <div class="entry">
+      <h3>M.Sc. in Mathematics</h3>
+      <div class="meta">Azarbaijan Shahid Madani University · 2011</div>
+    </div>
+    <div class="entry">
+      <h3>B.Sc. in Mathematics</h3>
+      <div class="meta">Azad University of Tabriz · 2009</div>
+    </div>
+  </section>
 
-    <div class="timeline-item">
-        <h4>Data & AI Specialties</h4>
-        <p>High-dimensional data handling, signal sampling methods, noise reduction, graph algorithms (PageRank, Dijkstra), supervised/unsupervised learning, reinforcement learning, classification, and feature extraction.</p>
+  <!-- ================= PUBLICATIONS ================= -->
+  <section>
+    <div class="section-head"><span class="mark">§</span><h2>Publications</h2></div>
+
+    <div class="pub featured">
+      <div class="year">2026</div>
+      <div class="body">
+        <h3><a href="https://arxiv.org/abs/2605.27498" target="_blank" rel="noopener">Rotation-Invariant Vectorized Shape Representations</a><span class="tag">Newest</span></h3>
+        <p class="authors"><span class="me">H. Shafieasl</span>, J. M. Phillips</p>
+        <p class="venue">arXiv:2605.27498 · cs.CG</p>
+      </div>
     </div>
 
-    <div class="timeline-item">
-        <h4>Mathematics & Geometry</h4>
-        <p>Harmonic analysis, linear algebra, probability, differential equations, complex analysis, discrete structures, 2D object classification, and structural analysis of star-shaped objects.</p>
+    <div class="pub">
+      <div class="year">2026</div>
+      <div class="body">
+        <h3><a href="https://arxiv.org/abs/2603.09198" target="_blank" rel="noopener">On the Extension of Inner Derivations from Dense Ideals in Banach Algebras</a></h3>
+        <p class="authors"><span class="me">H. Shafieasl</span>, A. M. Tavakkoli</p>
+        <p class="venue">arXiv:2603.09198 · math.FA</p>
+      </div>
     </div>
 
-    <div class="timeline-item">
-        <h4>Graduate Coursework</h4>
-        <div class="badge-container">
-            <span class="badge">High-Dimensional Data Analysis</span>
-            <span class="badge">Data Mining</span>
-            <span class="badge">Artificial Intelligence</span>
-            <span class="badge">Machine Learning</span>
-        </div>
+    <div class="pub">
+      <div class="year">2025</div>
+      <div class="body">
+        <h3><a href="https://www.heldermann.de/JGG/JGG28/JGG282/jgg28013.htm" target="_blank" rel="noopener">Parameterized Folded State Shape Modeling of David Huffman&rsquo;s Ellipse</a></h3>
+        <p class="authors">A. Safary, <span class="me">H. Shafieasl</span>, J. Mitani</p>
+        <p class="venue">Journal for Geometry and Graphics · 28(2):199–212</p>
+      </div>
     </div>
 
-    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Research & Projects</h2>
-    <ul>
-        <li><strong>Computational Geometry (Submitted Paper):</strong> Developed an interdisciplinary method for analyzing star-shaped and non-star-shaped objects in 2D space. Bridged mathematical structure with CS applications like shape recognition and boundary representation.</li>
-        <li><strong>Geometric Origami Modeling:</strong> Used Python + Rhino-Grasshopper to study curved origami behavior with mathematical and algorithmic insights.</li>
-        <li><strong>Discrete Curve Geometry:</strong> Investigated curvature, torsion, and shape properties of sampled curves for use in graphics and CAD.</li>
+    <div class="pub">
+      <div class="year">2024</div>
+      <div class="body">
+        <h3><a href="https://www.heldermann.de/JGG/JGG28/JGG281/jgg28006.htm" target="_blank" rel="noopener">Geometric Design Tool for One-Fold, a Curved Origami with a Single Fold</a></h3>
+        <p class="authors">A. Safary, <span class="me">H. Shafieasl</span>, J. Mitani</p>
+        <p class="venue">Journal for Geometry and Graphics · 28(1):089–101</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="year">2020</div>
+      <div class="body">
+        <h3><a href="https://www.pmf.ni.ac.rs/filomat-content/2020/34-5/34-5-30-1459.pdf" target="_blank" rel="noopener">Bounded Pseudo-Amenability and Contractibility of Certain Banach Algebras</a></h3>
+        <p class="authors">H. Pourmahmood-Aghababa, M. H. Sattari, <span class="me">H. Shafieasl</span></p>
+        <p class="venue">Filomat · 34(5):1701–1712</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="year">2020</div>
+      <div class="body">
+        <h3><a href="https://www.m-hikari.com/imf/imf-2020/5-8-2020/p/shafieaslIMF5-8-2020.pdf" target="_blank" rel="noopener">A Note on Ramified Coverings of Riemann Surfaces</a></h3>
+        <p class="authors"><span class="me">H. Shafieasl</span></p>
+        <p class="venue">International Mathematical Forum · 15(8):377–381</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="year">2017</div>
+      <div class="body">
+        <h3><a href="https://scma.maragheh.ac.ir/article_22501.html" target="_blank" rel="noopener">Symmetric Module and Connes Amenability</a></h3>
+        <p class="authors"><span class="me">H. Shafieasl</span>, M. H. Sattari</p>
+        <p class="venue">Sahand Communications in Mathematical Analysis · 5(1):49–59</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="year">2017</div>
+      <div class="body">
+        <h3><a href="https://www.semnan.ac.ir/files/2/1397/jhs/v6n1_3.pdf" target="_blank" rel="noopener">Product of Derivations on Triangular Banach Algebras</a></h3>
+        <p class="authors">M. H. Sattari, <span class="me">H. Shafieasl</span></p>
+        <p class="venue">Journal of Hyperstructures · 6(1):28–39</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH & PROJECTS ================= -->
+  <section>
+    <div class="section-head"><span class="mark">§</span><h2>Research &amp; Projects</h2></div>
+    <ul class="prose-list">
+      <li><strong>Rotation-invariant shape representations.</strong> Fixed-length vectorized descriptors for 2D closed curves designed to be invariant to rotation and reparameterization, supporting shape recognition, retrieval, and large-scale comparison.</li>
+      <li><strong>Analysis of star-shaped and non-star-shaped objects.</strong> An interdisciplinary method bridging mathematical structure with computational tasks such as boundary representation and 2D object classification.</li>
+      <li><strong>Geometric origami modeling.</strong> Python and Rhino-Grasshopper studies of curved-fold behavior, combining mathematical and algorithmic insight.</li>
+      <li><strong>Discrete curve geometry.</strong> Curvature, torsion, and shape properties of sampled curves for use in graphics and CAD.</li>
     </ul>
+  </section>
 
-    <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
-    
-    <div class="timeline-item">
-        <h4>Python Instructor</h4>
-        <div class="timeline-meta">Private Institutes (2020–Present)</div>
-        <ul>
-            <li>Taught Python with a focus on data workflows, algorithm design, and machine learning fundamentals.</li>
-        </ul>
+  <!-- ================= SKILLS ================= -->
+  <section>
+    <div class="section-head"><span class="mark">§</span><h2>Skills &amp; Coursework</h2></div>
+
+    <div class="subgroup">
+      <h3>Programming &amp; Tools</h3>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">NumPy</span>
+        <span class="badge">SciPy</span>
+        <span class="badge">Matplotlib</span>
+        <span class="badge">OOP</span>
+        <span class="badge">Rhino-Grasshopper</span>
+      </div>
     </div>
 
-    <div class="timeline-item">
-        <h4>Mathematics Lecturer</h4>
-        <div class="timeline-meta">Azerbaijan Shahid Madani University (2010–2018)</div>
-        <ul>
-            <li>Taught Linear Algebra, Calculus, Analysis, Differential Equations, Complex Functions, and Discrete Mathematics.</li>
-            <li>Guided students in mathematical thinking applied to algorithms and computational tasks.</li>
-        </ul>
+    <div class="subgroup">
+      <h3>Data &amp; AI</h3>
+      <p>High-dimensional data handling, signal sampling and noise reduction, graph algorithms
+        (PageRank, Dijkstra), supervised and unsupervised learning, reinforcement learning,
+        classification, and feature extraction.</p>
     </div>
 
-    <div class="timeline-item">
-        <h4>Mathematics Teacher</h4>
-        <div class="timeline-meta">Various Colleges (2009–2024)</div>
-        <ul>
-            <li>Taught advanced mathematics emphasizing quantitative reasoning and rigorous problem-solving.</li>
-        </ul>
+    <div class="subgroup">
+      <h3>Mathematics &amp; Geometry</h3>
+      <p>Harmonic analysis, linear algebra, probability, differential equations, complex analysis,
+        discrete structures, 2D object classification, and structural analysis of star-shaped objects.</p>
     </div>
 
-    <h2 class="section-title"><i class="fas fa-book"></i> Publications</h2>
+    <div class="subgroup">
+      <h3>Graduate Coursework</h3>
+      <div class="badges">
+        <span class="badge">High-Dimensional Data Analysis</span>
+        <span class="badge">Data Mining</span>
+        <span class="badge">Computational Topology</span>
+        <span class="badge">Artificial Intelligence</span>
+        <span class="badge">Machine Learning</span>
+      </div>
+    </div>
+  </section>
 
-    <div class="publication">
-        <h4><a href="https://www.heldermann.de/JGG/JGG28/JGG282/jgg28013.htm" target="_blank">Parameterized Folded State Shape Modeling of David Huffman’s Ellipse</a></h4>
-        <p class="pub-journal">Journal for Geometry and Graphics, 28(2):199–212, 2025</p>
-        <p>A. Safary, H. Shafieasl, J. Mitani</p>
+  <!-- ================= EXPERIENCE ================= -->
+  <section>
+    <div class="section-head"><span class="mark">§</span><h2>Experience</h2></div>
+
+    <div class="entry">
+      <h3>Python Instructor</h3>
+      <div class="meta">Private Institutes · 2020–Present</div>
+      <ul>
+        <li>Taught Python with a focus on data workflows, algorithm design, and machine learning fundamentals.</li>
+      </ul>
     </div>
 
-    <div class="publication">
-        <h4><a href="https://www.heldermann.de/JGG/JGG28/JGG281/jgg28006.htm" target="_blank">Geometric Design Tool for One-Fold, a Curved Origami with a Single Fold</a></h4>
-        <p class="pub-journal">Journal for Geometry and Graphics, 28(1):089–101, 2024</p>
-        <p>A. Safary, H. Shafieasl, J. Mitani</p>
+    <div class="entry">
+      <h3>Mathematics Lecturer</h3>
+      <div class="meta">Azarbaijan Shahid Madani University · 2010–2018</div>
+      <ul>
+        <li>Taught Linear Algebra, Calculus, Analysis, Differential Equations, Complex Functions, and Discrete Mathematics.</li>
+        <li>Guided students in mathematical thinking applied to algorithms and computational tasks.</li>
+      </ul>
     </div>
 
-    <div class="publication">
-        <h4><a href="https://www.pmf.ni.ac.rs/filomat-content/2020/34-5/34-5-30-1459.pdf" target="_blank">Bounded Pseudo-Amenability and Contractibility of Certain Banach Algebras</a></h4>
-        <p class="pub-journal">Filomat, 34(5):1701–1712, 2020</p>
-        <p>H. Pourmahmood-Aghababa, M.H. Sattari, H. Shafieasl</p>
+    <div class="entry">
+      <h3>Mathematics Teacher</h3>
+      <div class="meta">Various Colleges · 2009–2024</div>
+      <ul>
+        <li>Taught advanced mathematics emphasizing quantitative reasoning and rigorous problem-solving.</li>
+      </ul>
     </div>
+  </section>
 
-    <div class="publication">
-        <h4><a href="https://www.m-hikari.com/imf/imf-2020/5-8-2020/p/shafieaslIMF5-8-2020.pdf" target="_blank">A Note on Ramified Coverings of Riemann Surfaces</a></h4>
-        <p class="pub-journal">International Mathematical Forum, 15(8):377–381, 2020</p>
-        <p>H. Shafieasl</p>
-    </div>
+  <!-- ================= DUO: AWARDS + INTERESTS ================= -->
+  <div class="duo">
+    <section style="margin-top:0;">
+      <div class="section-head"><span class="mark">§</span><h2>Honors</h2></div>
+      <ul class="prose-list">
+        <li>Ranked 1st in cumulative GPA (B.Sc. and M.Sc. in Mathematics).</li>
+      </ul>
+    </section>
 
-    <div class="publication">
-        <h4><a href="https://scma.maragheh.ac.ir/article_22501.html" target="_blank">Symmetric Module and Connes Amenability</a></h4>
-        <p class="pub-journal">Sahand Communications in Mathematical Analysis, 5(1):49–59, 2017</p>
-        <p>H. Shafieasl, M.H. Sattari</p>
-    </div>
+    <section style="margin-top:0;">
+      <div class="section-head"><span class="mark">§</span><h2>Interests</h2></div>
+      <ul class="prose-list">
+        <li>Computational geometry &amp; shape analysis</li>
+        <li>High-dimensional data &amp; large-scale computation</li>
+        <li>Machine learning &amp; reinforcement learning</li>
+        <li>Graph algorithms &amp; spectral methods</li>
+        <li>Mathematics–machine learning interfaces</li>
+      </ul>
+    </section>
+  </div>
 
-    <div class="publication">
-        <h4><a href="https://www.semnan.ac.ir/files/2/1397/jhs/v6n1_3.pdf" target="_blank">Product of Derivations on Triangular Banach Algebras</a></h4>
-        <p class="pub-journal">Journal of Hyperstructures, 6(1), 2017</p>
-        <p>M.H. Sattari, H. Shafieasl</p>
-    </div>
-
-    <div class="publication">
-        <h4><a href="https://arxiv.org/abs/2603.09198" target="_blank">On the extension of inner derivations from dense ideals in Banach algebras</a></h4>
-        <p class="pub-journal">arXiv preprint</p>
-        <p>H. Shafieasl, A. M. Tavakkoli</p>
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
-        <div style="flex: 1; min-width: 300px;">
-            <h2 class="section-title" style="margin-top: 0;"><i class="fas fa-award"></i> Awards & Honors</h2>
-            <ul>
-                <li>Ranked 1st in Cumulative GPA (B.Sc. and M.Sc. in Mathematics).</li>
-            </ul>
-        </div>
-        
-        <div style="flex: 1; min-width: 300px;">
-            <h2 class="section-title" style="margin-top: 0;"><i class="fas fa-lightbulb"></i> Research Interests</h2>
-            <ul>
-                <li>High-Dimensional Data & Large-Scale Computation</li>
-                <li>Machine Learning & Reinforcement Learning</li>
-                <li>Computational Geometry & Shape Analysis</li>
-                <li>Graph Algorithms & Spectral Methods</li>
-                <li>Mathematics–Machine Learning Interfaces</li>
-            </ul>
-        </div>
-    </div>
+  <footer class="colophon">
+    Hamid Shafieasl &middot; University of Utah &middot; Salt Lake City, UT
+  </footer>
 
 </div>
-
 </body>
 </html>
